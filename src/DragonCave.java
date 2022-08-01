@@ -1,14 +1,15 @@
 import java.util.Scanner;
 
 public class DragonCave {
-    public static void myMethod() {
+    public static void randomNumber() {
         java.util.Random random = new java.util.Random();
-        int tmp = random.nextInt(2) + 1;
-        // code to be executed
+        int tmp = random.nextInt(2) + 1; //Chooses 1 or 2 randomly.
         Scanner sc1 = new Scanner(System.in);
         int input = 0;
         System.out.println("\n");
         input = sc1.nextInt();
+
+        //Randomly assigns user input to radom number
         if (input == tmp){
             System.out.println
                     ("\n\nYou approach the cave...\n" +
@@ -17,6 +18,8 @@ public class DragonCave {
                             " dragon jumps out in front of you! He opens his jaws and...\n" +
                             "Gobbles you down in one bite!\n");
         }
+
+        //If input does not equal random number, it equals the other random number.
         else{
             System.out.println
                     ("\n\nYou approach the cave...\n" +
@@ -26,8 +29,6 @@ public class DragonCave {
                             "Shares his treasures with you!\n");
         }
     }
-    //hello
-
     public static void main(String[] args){
         System.out.println
                 ("You are in a land of full of dragons. In front of you,\n" +
@@ -38,6 +39,6 @@ public class DragonCave {
                         "is greedy and hungry and will eat on sight.\n" +
                         "Which cave will" +
                         " you go into? (1,2)");
-        myMethod();
+        randomNumber(); //Calls method
     }
 }
