@@ -25,7 +25,7 @@ public class DragonCave {
                     ("\n\nYou approach the cave...\n" +
                             "It is dark and gloomy... \n" +
                             "A large"  +
-                            " dragon jumps out in front of you! He aproaches you speedily and...\n" +
+                            " dragon jumps out in front of you! He approaches you speedily and...\n" +
                             "Shares his treasures with you!\n");
         }
     }
@@ -36,7 +36,7 @@ public class DragonCave {
                         "In one cave, the dragon is friendly\n" +
                         "and will share his treasures with you. " +
                         "The other dragon\n" +
-                        "is greedy and hungry and will eat on sight.\n" +
+                        "is greedy and hungry and will eat you on sight.\n" +
                         "Which cave will" +
                         " you go into? (1,2)");
         randomNumber(); //Calls method
