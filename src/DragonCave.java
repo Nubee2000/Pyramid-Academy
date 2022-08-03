@@ -7,8 +7,27 @@ public class DragonCave {
         Scanner sc1 = new Scanner(System.in);
         int input = 0;
         System.out.println("\n");
-        input = sc1.nextInt();
+        boolean again = true;
 
+        //Input validation
+        while(again) {
+            try {
+                input = sc1.nextInt();
+                if (input <= 0 || input > 2) {
+                    // this gets caught in the catch block
+                    throw new IllegalArgumentException("\n\nInput invalid: Choose 1 or 2\n\n");
+                }
+                again = false;
+
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+            catch (Exception e){
+                    System.out.println("\n\nNo characters or words: Choose 1 or 2\n\n");
+                    sc1.next();
+
+            }
+        }
         //Randomly assigns user input to radom number
         if (input == tmp){
             System.out.println
@@ -20,7 +39,7 @@ public class DragonCave {
         }
 
         //If input does not equal random number, it equals the other random number.
-        else{
+        else {
             System.out.println
                     ("\n\nYou approach the cave...\n" +
                             "It is dark and gloomy... \n" +
