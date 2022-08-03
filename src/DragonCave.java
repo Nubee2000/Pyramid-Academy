@@ -17,7 +17,9 @@ public class DragonCave {
                     // this gets caught in the catch block
                     throw new IllegalArgumentException("\n\nInput invalid: Choose 1 or 2\n\n");
                 }
-                again = false;
+                else {
+                    again = false;
+                }
 
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
