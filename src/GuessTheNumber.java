@@ -7,7 +7,7 @@ public class GuessTheNumber {
         String userName = "";
         System.out.println("Hello! What is your name?\n\n");
         boolean again_1 = true;
-        //In  put validation for string with no special characters or numbers
+        //Input validation for string with no special characters or numbers
         while (again_1) {
             try {
                 userName = myObj.nextLine();
