@@ -3,47 +3,40 @@ import java.util.Scanner;
 
 public class GuessTheNumber {
     public static void main(String[] args) {
+        Scanner myObj = new Scanner(System.in);
+        String userName = "";
         System.out.println("Hello! What is your name?\n\n");
-        int num = 0;
-        Scanner number = new Scanner(System.in);
-        play(num);
-        System.out.println(play(num));
-    }
-
-public static String play(int num){
-            Scanner myObj = new Scanner(System.in);
-            String userName = "";
-            boolean again_1 = true;
-            //In  put validation for string with no special characters or numbers
-            while (again_1) {
-                try {
-                    userName = myObj.nextLine();
-                    for (int i = 0; i < userName.length(); i++) {
-                        if (userName.charAt(i) <= 64 || userName.charAt(i) >= 91 &&
-                                userName.charAt(i) <= 96 || userName.charAt(i) > 122) {
-                            throw new RuntimeException("Invalid: No special characters or numbers");
-                        } else {
-                            again_1 = false;
-                        }
+        boolean again_1 = true;
+        //Input validation for string with no special characters or numbers
+        while (again_1) {
+            try {
+                userName = myObj.nextLine();
+                for (int i = 0; i < userName.length(); i++) {
+                    if (userName.charAt(i) <= 64 || userName.charAt(i) >= 91 &&
+                            userName.charAt(i) <= 96 || userName.charAt(i) > 122) {
+                        throw new RuntimeException("Invalid: No special characters or numbers");
                     }
-                } catch (RuntimeException e) {
-                    System.out.println(e.getMessage());
-                    again_1 = true;
+                    else {
+                        again_1 = false;
+                    }
                 }
+            } catch (RuntimeException e) {
+                System.out.println(e.getMessage());
+                again_1 = true;
             }
-            System.out.println("\n\nWell, " + userName + ", " +
-                    "I am thinking of a number between 1 and 20.");
+        }
+        System.out.println("\n\nWell, " + userName + ", " +
+                "I am thinking of a number between 1 and 20.");
             int min = 1;
             int max = 20;
             int count = 1;
-            num = 0;
+            int num = 0;
             Scanner number = new Scanner(System.in);
 
             int random_int = (int) Math.floor(Math.random() * (double) (max - min + 1) + (double) min);
             boolean playAgain = true;
 
             //Loops until playAgain == false
-
             while (playAgain) {
                 //User get 6 chances
                 for (count = 1; count < 7; count = count + 1) {
@@ -114,12 +107,17 @@ public static String play(int num){
                     System.out.println();
                 }
             }
-    return "try";
-
         }
-
-
-
     }
+
+
+
+
+
+
+
+
+
+
 
 
